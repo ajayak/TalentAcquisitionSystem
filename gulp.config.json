@@ -1,0 +1,32 @@
+{
+  "client": "./src/client/",
+  "server": "./src/server/",
+  "api": "/api",
+  "data": "/../../data/",
+  "test": "./src/client/test/",
+  "html": "./src/client/**/*.html",
+  "htmltemplates": "./src/client/app/**/*.html",
+  "vendorjs": [
+   
+  ],
+  "vendorcss": [
+
+  ],
+  "css": [
+    
+  ],
+  "js": [
+   
+  ],
+  "nodejs": [
+    "./src/server/**/*.js"
+  ],
+  "fonts": [
+    
+  ],
+  "images": [
+    
+  ],
+  "report": "./report/",
+  "build": "./build/"
+}
