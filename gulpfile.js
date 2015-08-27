@@ -27,7 +27,7 @@ gulp.task('help', plug.taskListing);
 gulp.task('analyze', function() {
     log('Analyzing source with JSHint, JSCS, and Plato');
 
-    var jshint = analyzejshint([].concat(paths.js, paths.specs, paths.nodejs));
+    var jshint = analyzejshint([].concat(paths.js, paths.nodejs));
     var jscs = analyzejscs([].concat(paths.js, paths.nodejs));
 
     startPlatoVisualizer();
