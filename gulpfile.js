@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var del = require('del');
 var glob = require('glob');
-var karma = require('karma').server;
 var merge = require('merge-stream');
 var paths = require('./gulp.config.json');
 var plato = require('plato');
@@ -19,6 +18,8 @@ var port = process.env.PORT || 7203;
  * List the available gulp tasks
  */
 gulp.task('help', plug.taskListing);
+
+gulp.task('default', ['help']);
 
 /**
  * Lint the code, create coverage report, and a visualizer
