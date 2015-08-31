@@ -1,0 +1,26 @@
+{
+  "name": "TalentAcquisitionSystem",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ajayak/TalentAcquisitionSystem",
+  "authors": [
+    "Ajay Kumar <ajayak731@hotmail.com>"
+  ],
+  "description": "Talent Acquisition System",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "restangular": "~1.5.1",
+    "lodash": "~3.10.1",
+    "angular-loading-bar": "~0.8.0",
+    "angular-messages": "~1.4.5",
+    "angular-material": "~0.10.1"
+  }
+}
