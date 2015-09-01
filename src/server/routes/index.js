@@ -1,2 +1,6 @@
 //Require all route files
-//require('./product')
+module.exports = function(app) {
+	
+	require('./ping')(app);
+
+};
