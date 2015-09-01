@@ -20,9 +20,11 @@ Install required global packages using the following commands:
 `npm install -g nodemon`  
 
 ## Running the project
-After installing all the project dependencies, type  
-`gulp serve-dev`  
-to serve your code in browser and start browser-sync to listen for client and server changes.
 
-*Note: gulp serve-build is Work in progress*
+### Development Serve
+`gulp serve-dev`  
+
+### Production Serve
+`gulp serve-build`  
+
 

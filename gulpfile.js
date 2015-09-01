@@ -302,7 +302,7 @@ gulp.task('serve-dev', function () {
 /**
  * serve the build environment
  */
-gulp.task('serve-build', function () {
+gulp.task('serve-build', ['build'], function () {
     serve({
         mode: 'build'
     });
