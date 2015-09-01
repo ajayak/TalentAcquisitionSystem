@@ -6,7 +6,7 @@ Clone the repostory using the following command
 
 ## Node Package Installation  
 Open project root directory and install node packages using  
-`npm init`
+`npm install`
 
 ## Bower Package Installation  
 Open project root directory and install bower packages using  
