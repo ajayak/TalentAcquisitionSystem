@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title zz-update-title>TAS</title>
-    
-    <link rel="stylesheet" href="bower_components\angular-material\angular-material.min.css">
-    <link rel="stylesheet" href="bower_components\angular-loading-bar\build\loading-bar.min.css">
-    <link rel="stylesheet" href="bower_components\toastr\toastr.min.css">
+    <!-- inject-vendor:css -->
+    <link rel="stylesheet" href="bower_components\angular-material\angular-material.css">
+    <link rel="stylesheet" href="bower_components\angular-loading-bar\build\loading-bar.css">
+    <link rel="stylesheet" href="bower_components\toastr\toastr.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link href="/src/client/content/customtheme.css" rel="stylesheet">
+    <link href="/src/client/content/styles.css" rel="stylesheet" />
+    <!-- endinject -->
+
     <style>
         /* This helps the ng-show/ng-hide animations start at the right place. */
         /* Since Angular has this but needs to load, this gives us the class early. */
@@ -28,47 +35,50 @@
     <!--Fill View based on App Route/State-->
     <div ui-view></div>
 
-    <!--Vendor Scripts-->
-    <script src="bower_components\jquery\dist\jquery.min.js"></script>
-    <script src="bower_components\lodash\lodash.min.js"></script>
+    <!-- inject-vendor:js -->
+    <script src="bower_components\jquery\dist\jquery.js"></script>
+    <script src="bower_components\lodash\lodash.js"></script>
     <script src="bower_components\toastr\toastr.js"></script>
     <script src="bower_components\angular\angular.js"></script>
-    <script src="bower_components\angular-animate\angular-animate.min.js"></script>
-    <script src="bower_components\angular-aria\angular-aria.min.js"></script>
-    <script src="bower_components\angular-material\angular-material.min.js"></script>
-    <script src="bower_components\angular-ui-router\release\angular-ui-router.min.js"></script>
-    <script src="bower_components\restangular\dist\restangular.min.js"></script>
-    <script src="bower_components\angular-loading-bar\build\loading-bar.min.js"></script>
-    <script src="bower_components\angular-messages\angular-messages.min.js"></script>
-    
-    <!--Client Scripts-->
-    
+    <script src="bower_components\angular-animate\angular-animate.js"></script>
+    <script src="bower_components\angular-aria\angular-aria.js"></script>
+    <script src="bower_components\angular-material\angular-material.js"></script>
+    <script src="bower_components\angular-ui-router\release\angular-ui-router.js"></script>
+    <script src="bower_components\restangular\dist\restangular.js"></script>
+    <script src="bower_components\angular-loading-bar\build\loading-bar.js"></script>
+    <script src="bower_components\angular-messages\angular-messages.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <!-- Bootstrapping -->
+
     <!--App Module-->
     <script src="app/app.module.js"></script>
     <script src="app/app.route.js"></script>
-    
+
     <!--Blocks Module-->
     <script src="app/blocks/logger/logger.module.js"></script>
     <script src="app/blocks/logger/logger.js"></script>
     <script src="app/blocks/exception/exception.module.js"></script>
     <script src="app/blocks/exception/exception-handler.js"></script>
     <script src="app/blocks/exception/exception.js"></script>
-    
+
     <!--Core Module-->
     <script src="app/core/core.module.js"></script>
     <script src="app/core/constants.js"></script>
     <script src="app/core/config.js"></script>
-    
+
     <!--Widgets-->
     <script src="app/widgets/widgets.module.js"></script>
     <script src="app/widgets/zzUpdateTitle.js"></script>
-    
+
     <!--Demo Module-->
     <script src="app/demo/demo.module.js"></script>
     <script src="app/demo/demo.route.js"></script>
     <script src="app/demo/demo.factory.js"></script>
     <script src="app/demo/demoCtrl.js"></script>
-    
+
+    <!-- endinject -->
 </body>
 
 </html>
