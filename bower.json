@@ -21,6 +21,8 @@
     "lodash": "~3.10.1",
     "angular-loading-bar": "~0.8.0",
     "angular-messages": "~1.4.5",
-    "angular-material": "~0.10.1"
+    "angular-material": "~0.10.1",
+    "toastr": "~2.1.2",
+    "jquery": "~2.1.4"
   }
 }

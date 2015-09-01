@@ -385,9 +385,9 @@ function serve(args) {
  * Start BrowserSync
  */
 function startBrowserSync() {
-    if(!env.browserSync || browserSync.active) {
-        return;
-    }
+    // if(!env.browserSync || browserSync.active) {
+    //     return;
+    // }
 
     log('Starting BrowserSync on port ' + port);
     browserSync({
