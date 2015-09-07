@@ -24,5 +24,8 @@
     "angular-material": "~0.10.1",
     "toastr": "~2.1.2",
     "jquery": "~2.1.4"
+  },
+  "resolutions": {
+    "angular": "1.4.5"
   }
 }

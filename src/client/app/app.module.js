@@ -11,7 +11,8 @@
         // Custom modules
         'app.core',
         'app.widgets',
-        'app.demo',
+        'app.demo', 
+        
         
         // 3rd Party Modules
         'ngMaterial',        
