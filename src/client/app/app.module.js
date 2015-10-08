@@ -11,11 +11,12 @@
         // Custom modules
         'app.core',
         'app.widgets',
-        'app.demo', 
-        
-        
+        'app.demo',
+        'app.login',
+        'app.dashboard',
+
         // 3rd Party Modules
-        'ngMaterial',        
+        'ngMaterial',
         'angular-loading-bar'
     ]);
 

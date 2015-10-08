@@ -21,9 +21,16 @@ Install required global packages using the following commands:
 `npm install -g bower`
 `npm install -g tsd`
 
-## Running the project with VS Code
+## Running the project with VS Code (Server Code)
+Run the project using `F5` key
+
+### Development Serve (Client Code)
+`gulp serve-dev`
+
+### Start Mongo Server
 
 ## Running the project without VS Code
+Change the port number in constants.js from 7200 to 7203
 
 ### Development Serve
 `gulp serve-dev`

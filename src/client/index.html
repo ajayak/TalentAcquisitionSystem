@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bower_components\angularjs-datepicker\src\css\angular-datepicker.css">
     <link rel="stylesheet" href="bower_components\angular-loading-bar\build\loading-bar.css">
     <link rel="stylesheet" href="bower_components\toastr\toastr.css">
-    <link rel="stylesheet" href="/src/client/content/css/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="/src/client/content/css/list.css">
 	<link rel="stylesheet" href="/src/client/content/css/new.css">
     <link rel="stylesheet" href="/src/client/content/css/googlecss.css">
@@ -26,7 +26,7 @@
     <style>
         /* This helps the ng-show/ng-hide animations start at the right place. */
         /* Since Angular has this but needs to load, this gives us the class early. */
-        
+
         .ng-hide {
             display: none !important;
         }
@@ -34,12 +34,11 @@
 </head>
 
 <body>
-
     <!--Fill View based on App Route/State-->
     <div ui-view></div>
 
     <!-- inject-vendor:js -->
-    <script src="../content/js/jquery-1.11.3.min.js"></script>
+    <script src="bower_components\jquery\dist\jquery.js"></script>
     <script src="bower_components\lodash\lodash.js"></script>
     <script src="bower_components\toastr\toastr.js"></script>
     <script src="bower_components\angular\angular.js"></script>
@@ -57,12 +56,12 @@
     <!-- endinject -->
 
     <!-- inject:js -->
-    
+
     <!-- Bootstrapping -->
 
     <!--App Module-->
     <script src="app/app.module.js"></script>
-    <script src="app/app.route.js"></script>  
+    <script src="app/app.route.js"></script>
 
     <!--Blocks Module-->
     <script src="app/blocks/logger/logger.module.js"></script>
@@ -96,7 +95,7 @@
 	<script src="app/dashboard/dashboard.route.js"></script>
 	<script src="app/dashboard/dashboard.factory.js"></script>
 	<script src="app/dashboard/dashboardCtrl.js"></script>
-    
+
     <!-- endinject -->
 </body>
 

@@ -13,3 +13,5 @@
 /// <reference path="connect-flash/connect-flash.d.ts" />
 /// <reference path="passport/passport.d.ts" />
 /// <reference path="passport-local/passport-local.d.ts" />
+/// <reference path="angularjs/angular.d.ts" />
+/// <reference path="jquery/jquery.d.ts" />

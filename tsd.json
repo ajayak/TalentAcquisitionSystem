@@ -49,6 +49,12 @@
     },
     "passport-local/passport-local.d.ts": {
       "commit": "d6c98baa7fd703e449cf37f3ec39ed3bd92cfd35"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "d6c98baa7fd703e449cf37f3ec39ed3bd92cfd35"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "d6c98baa7fd703e449cf37f3ec39ed3bd92cfd35"
     }
   }
 }
