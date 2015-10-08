@@ -1,7 +1,7 @@
 /// <reference path="../../../typings/express/express.d.ts" />
 module.exports = function (app) {
 	var Interviewer = require('../models/InterviewerModel');
-	
+
 	var db = require('../data/db');
 
 	app.post('/addinterviewer', function (req, res) {
@@ -9,7 +9,7 @@ module.exports = function (app) {
 		var interviewer = new Interviewer({
 			InterviewerName: c.InterviewerName,
 			id: c.id,
-			domain1:c.domain1
+			domain1: c.domain1
 		});
 
 		interviewer.save(function (err) {
@@ -23,12 +23,13 @@ module.exports = function (app) {
 			}
 
 		});
-		});
-	 app.post('/listinterviewer', function (req, res) {
+	});
+
+	app.post('/listinterviewer', function (req, res) {
 		var collection = db.collection('interviewers');
 		collection.find().toArray(function (err, result) {
 			if (err) {
-				
+
 				console.log(err);
 
 			} else if (result.length) {
@@ -41,8 +42,4 @@ module.exports = function (app) {
 			}
 		});
 	});
-		
-	
-	
 }
- 
