@@ -2,7 +2,7 @@
 {
 	"editor.tabSize": 4,
 	"editor.wrappingColumn": 0,
-	"files.trimTrailingWhitespace": true,
+	"files.trimTrailingWhitespace": false,
 	"editor.formatOnType": true,
 	"editor.lineHeight": 0
 }
