@@ -1,0 +1,12 @@
+<md-dialog aria-label="Form" style="position:relative;width:50%;"> 
+	<md-content class="md-padding"><br/> 
+	<div layout layout-sm="row" class="dialog-demo-content">
+		<form name="userForm" style="position:relative;width:100%;">&nbsp;&nbsp;&nbsp;<md-input-container flex > 
+			<label>Comments</label> 
+			<textarea ng-model="user.comments" columns="7" md-maxlength="500" style="width:575px;"></textarea> 
+			</md-input-container> &nbsp;&nbsp;&nbsp;</form>
+			</div> </md-content> 
+			<div class="md-actions" layout="row"> <span flex></span> 
+			<md-button ng-click="closeDialog()"> Cancel </md-button> 
+			<md-button ng-click="rejectedCandidate()" class="md-primary"> Rejected </md-button> 
+			</div></md-dialog>

@@ -1,0 +1,27 @@
+<md-dialog aria-label="Form" style="width:40%;height:60%"> <md-content
+	class="md-padding">
+	<label class="md-title">Add Interviewer</label>
+<form name="InterviewerForm" style="position:relative;width:100%;">
+	<div layout layout-sm="column">
+		
+			<md-select ng-model="user.domain1" placeholder="Domain" style="width:175px;">
+					<md-option >JAVA</md-option>
+					<md-option >.NET</md-option>
+					<md-option >UNIX</md-option>
+					<md-option >OPEN SYSTEM</md-option>
+				</md-select> &nbsp; &nbsp; &nbsp;
+		&nbsp;&nbsp;
+		<md-input-container flex> <label>Interviewer Name
+			</label> <input ng-model="user.InterviewerName"> </md-input-container>
+	</div>
+
+</form>
+</md-content>
+<div class="md-actions" layout="row" style="min-width: 75px;">
+	<span flex></span>
+	 
+		<md-button ng-click="closeDialog()"> Cancel </md-button>
+		<md-button ng-click="addInterviewer()" class="md-primary">
+		Save </md-button>
+</div>
+</md-dialog>

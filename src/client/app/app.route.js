@@ -2,11 +2,11 @@
     'use strict';
     angular.module('app')
         .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('login');
 
             $stateProvider
-                .state('home', {
-                    url: '/',
+                .state('test', {
+                   url: '/test',
                     template: '<h1>Go to Demo Page</h1> <a ui-sref="demo">Login</a>',
                     controller: function(logger){
                        console.log(logger);

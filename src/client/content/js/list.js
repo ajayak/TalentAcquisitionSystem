@@ -1,4 +1,4 @@
-var app = angular.module('StarterApp', ['ngMaterial', 'md.data.table']);
+var app = angular.module('list', ['ngMaterial', 'md.data.table']);
 app.controller('IconCtrl', function($scope) {}).config(function($mdIconProvider) {
     $mdIconProvider
        .iconSet('social', 'imges/add-icon.svg', 24)
@@ -255,7 +255,8 @@ app.config(function($mdIconProvider) {
       .iconSet('avatars', 'https://raw.githubusercontent.com/angular/material/master/docs/app/icons/avatar-icons.svg', 24)
       .defaultIconSet('https://raw.githubusercontent.com/google/material-design-icons/master/sprites/svg-sprite/svg-sprite-action.svg', 24);
 });
-app.controller('nutritionController', ['$q', '$scope', '$timeout', function ($q, $scope, $timeout) {
+
+app.controller('nutritionController', ['$q', '$scope', '$timeout', function ($q, $scope, $timeout, dashboard) {
   
   $scope.selected = [];
   
@@ -264,6 +265,7 @@ app.controller('nutritionController', ['$q', '$scope', '$timeout', function ($q,
     limit: 5,
     page: 1
   };
+
   
   $scope.desserts = {
     "count": 9,
