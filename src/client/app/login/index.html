@@ -1,31 +1,32 @@
 <hgroup>
-  <h1>Talent Acquisition System</h1>
+    <h1>Talent Acquisition System</h1>
 </hgroup>
 <form>
-  <div class="group">
-    <input type="text" ng-model='vm.user.name'><span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
-  </div>
-  <div class="group">
-    <input type="password" ng-model='vm.user.password'><span class="highlight"></span><span class="bar"></span>
-    <label>Password</label>
-  </div>
- 
-  <button type="button" ng-click='vm.validate()' class="button buttonBlue">Login
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
+    <div class="group">
+        <input type="text" ng-model='vm.user.name'><span class="highlight"></span><span class="bar"></span>
+        <label>Name</label>
+    </div>
+    <div class="group">
+        <input type="password" ng-model='vm.user.password'><span class="highlight"></span><span class="bar"></span>
+        <label>Password</label>
+    </div>
+
+    <button type="button" ng-click='vm.validate()' class="button buttonBlue">Login
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </button>
 
 </form>
 
 <script>
-   $('input').blur(function() {
+    $('input').blur(function() {
     var $this = $(this);
     if ($this.val())
       $this.addClass('used');
     else
       $this.removeClass('used');
   });
+
 </script>
 <footer><img src="../content/images/download.jpg"></a>
-  <p>&copy; Span Infotech</p>
+    <p>&copy; Span Infotech</p>
 </footer>

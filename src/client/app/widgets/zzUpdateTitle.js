@@ -1,6 +1,6 @@
 ﻿(function () {
     angular.module('app.widgets')
-    .directive('zzUpdateTitle', updateTitle);
+        .directive('zzUpdateTitle', updateTitle);
 
     function updateTitle($rootScope, $timeout) {
         // <title zz-update-title>Electronic Internal Auditing</title>
@@ -26,4 +26,4 @@
         };
     }
     updateTitle.$inject = ['$rootScope', '$timeout'];
-}());
+} ());

@@ -1,53 +1,51 @@
- 		 
- 
- <div layout="column" class="relative" layout-fill role="main">
-	<md-button class="md-fab md-fab-bottom-left fab"
-		ng-click="vm.showAdd()">+</md-button>
+<div layout="column" class="relative" layout-fill role="main">
+	<md-button class="md-fab md-fab-bottom-left fab" ng-click="vm.showAdd()">+</md-button>
 	<md-toolbar class="animate-show md-tall md-whiteframe-z1">
-	<div class="md-toolbar-tools">
-		<h3 style="color: #fffffb; font-size: 140%; !imprtant">Talent Acquisition System</h3>
+		<div class="md-toolbar-tools">
+			<h3 style="color: #fffffb; font-size: 140%; !imprtant">Talent Acquisition System</h3>
+			<span flex></span>
+			<md-button ng-click="vm.addInterviewer()">Add Interviewer</md-button>
+			<md-button ng-click="vm.goToHome()">Logout</md-button>
+		</div>
 		<span flex></span>
-<md-button ng-click="vm.addInterviewer()">Add Interviewer</md-button>		
-<md-button ng-click="vm.goToHome()">Logout</md-button>
-	</div>
-	<span flex></span> <md-tabs md-stretch-tabs="always"
-		md-selected="data.selectedIndex"> 
-		<md-tab id="tab1" aria-controls="tab1-content"> Dashboard </md-tab> 
-		<md-tab id="tab2" aria-controls="tab2-content"> Schedule Interviews </md-tab>
-		 <md-tab  id="tab3" aria-controls="tab3-content"> Scheduled </md-tab>
-		 <md-tab id="tab4" aria-controls="tab4-content"> Selected </md-tab> 
-		<md-tab  id="tab5" aria-controls="tab5-content"> On-Hold </md-tab> 
-		<md-tab  id="tab6" aria-controls="tab6-content"> Rejected</md-tab>  </md-tabs> </md-toolbar>
-	<md-content flex> <ui-view layout="column" layout-fill
-		layout-padding>
-	<div class="inset" hide-sm></div>
-	<ng-switch on="data.selectedIndex" class="tabpanel-container">
-	<div role="tabpanel" id="tab1-content" aria-labelledby="tab1"
-		ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100" ng-app="demoApp"">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Registered Candidates</h2>
+		<md-tabs md-stretch-tabs="always" md-selected="data.selectedIndex">
+			<md-tab id="tab1" aria-controls="tab1-content"> Dashboard </md-tab>
+			<md-tab id="tab2" aria-controls="tab2-content"> Schedule Interviews </md-tab>
+			<md-tab id="tab3" aria-controls="tab3-content"> Scheduled </md-tab>
+			<md-tab id="tab4" aria-controls="tab4-content"> Selected </md-tab>
+			<md-tab id="tab5" aria-controls="tab5-content"> On-Hold </md-tab>
+			<md-tab id="tab6" aria-controls="tab6-content"> Rejected</md-tab>
+		</md-tabs>
+	</md-toolbar>
+	<md-content flex>
+		<ui-view layout="column" layout-fill layout-padding>
+			<div class="inset" hide-sm></div>
+			<ng-switch on="data.selectedIndex" class="tabpanel-container">
+				<div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()"
+				layout="row" layout-align="center center">
+					<div flex-gt-sm="90" flex-gt-md="100" ng-app="demoApp" ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Registered Candidates</h2>
 				</md-data-table-toolbar> <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="name" name="Name"></th>
-							<th order-by="type" name="Email"></th>
-							<th numeric order-by="calories" name="Contact Number"></th>
-							<th numeric order-by="fat.value" name="Domain" align="left"></th>
-							<th numeric order-by="carbs" name="Experience"></th>
-							<th numeric order-by="carbs" name="Comments"></th>
-							<th numeric order-by="carbs" name="Status"></th>
+							<th order-by="name " name="Name "></th>
+							<th order-by="type " name="Email "></th>
+							<th numeric order-by="calories " name="Contact Number "></th>
+							<th numeric order-by="fat.value " name="Domain " align="left "></th>
+							<th numeric order-by="carbs " name="Experience "></th>
+							<th numeric order-by="carbs " name="Comments "></th>
+							<th numeric order-by="carbs " name="Status "></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-							 
-							ng-repeat="ds in vm.candidates  | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit">
+
+							ng-repeat="ds in vm.candidates | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit ">
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.email}}</td>
 							<td>{{ds.contactno}}</td>
@@ -56,91 +54,91 @@
 							<td>{{ds.comments}}</td>
 							<td>{{ds.status}}</td>
 							<td></td>
-							<td><md-button class="md-accent"
-									ng-click="vm.viewResume($event)">View Resume</md-button></td>
+							<td><md-button class="md-accent "
+									ng-click="vm.viewResume($event) ">View Resume</md-button></td>
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{ vm.candidates.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{ vm.candidates.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	</div>
-	<div role="tabpanel" id="tab2-content" aria-labelledby="tab2"
-		ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card
-					ng-controller="dashboardCtrl"> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Not Scheduled</h2>
+	<div role="tabpanel " id="tab2-content " aria-labelledby="tab2 "
+		ng-switch-when="1 " md-swipe-left="next() " md-swipe-right="previous() "
+		layout="row " layout-align="center center ">
+		<div flex-gt-sm="90 " flex-gt-md="100 ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card
+					ng-controller="dashboardCtrl "> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Not Scheduled</h2>
 				</md-data-table-toolbar>  <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="name" name="Name"</th>
-							<th order-by="type" name="Domain"></th>
-							<th numeric order-by="calories" name="Experience"></th>
-							<th numeric order-by="calories" name="Comments"></th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="type " name="Domain "></th>
+							<th numeric order-by="calories " name="Experience "></th>
+							<th numeric order-by="calories " name="Comments "></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-						 
-							ng-repeat="ds in vm.unscheduled |   limitTo: query.limit: (query.page - 1) * query.limit">
+
+							ng-repeat="ds in vm.unscheduled | limitTo: query.limit: (query.page - 1) * query.limit ">
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.domain}}</td>
 							<td>{{ds.experience}}</td>
 							<td>{{ds.comments}}</td>
 							<td></td>
-							<td><md-button class="md-raised"
-									ng-click="vm.showSchedule($event,ds.email)">Schedule</md-button></td>
-							<td><md-button class="md-raised md-primary"
-									ng-click="vm.showOnHold($event,ds.email)">On Hold</md-button></td>
-							<td><md-button class="md-raised md-warn"
-									ng-click="vm.showRejected($event,ds.email)">Reject</md-button></td>
+							<td><md-button class="md-raised "
+									ng-click="vm.showSchedule($event,ds.email) ">Schedule</md-button></td>
+							<td><md-button class="md-raised md-primary "
+									ng-click="vm.showOnHold($event,ds.email) ">On Hold</md-button></td>
+							<td><md-button class="md-raised md-warn "
+									ng-click="vm.showRejected($event,ds.email) ">Reject</md-button></td>
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{vm.unscheduled.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{vm.unscheduled.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	 </div>
-	 
-	 <div role="tabpanel" id="tab3-content" aria-labelledby="tab3"
-		ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card
-					ng-controller="dashboardCtrl"> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Scheduled</h2>
+
+	 <div role="tabpanel " id="tab3-content " aria-labelledby="tab3 "
+		ng-switch-when="2 " md-swipe-left="next() " md-swipe-right="previous() "
+		layout="row " layout-align="center center ">
+		<div flex-gt-sm="90 " flex-gt-md="100 ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card
+					ng-controller="dashboardCtrl "> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Scheduled</h2>
 				</md-data-table-toolbar>  <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="name" name="Name"></th>
-							<th order-by="type" name="Email"></th>
-							<th numeric order-by="calories" name="Contact Number"></th>
-							<th numeric order-by="Domain" name="Domain" align="left"></th>
-							<th numeric order-by="carbs" name="Experience"></th>
-							<th numeric order-by="carbs" name="Comments"></th>
-							<th numeric order-by="carbs" name="Status"></th>
+							<th order-by="name " name="Name "></th>
+							<th order-by="type " name="Email "></th>
+							<th numeric order-by="calories " name="Contact Number "></th>
+							<th numeric order-by="Domain " name="Domain " align="left "></th>
+							<th numeric order-by="carbs " name="Experience "></th>
+							<th numeric order-by="carbs " name="Comments "></th>
+							<th numeric order-by="carbs " name="Status "></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-						 
-							ng-repeat="ds in vm.scheduled |   limitTo: query.limit: (query.page - 1) * query.limit">
+
+							ng-repeat="ds in vm.scheduled | limitTo: query.limit: (query.page - 1) * query.limit ">
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.email}}</td>
 							<td>{{ds.contactno}}</td>
@@ -151,41 +149,41 @@
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{vm.scheduled.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{vm.scheduled.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	 </div>
-	 
-	 <div role="tabpanel" id="tab4-content" aria-labelledby="tab4"
-		ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card
-					ng-controller="dashboardCtrl"> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Scheduled</h2>
+
+	 <div role="tabpanel " id="tab4-content " aria-labelledby="tab4 "
+		ng-switch-when="3 " md-swipe-left="next() " md-swipe-right="previous() "
+		layout="row " layout-align="center center ">
+		<div flex-gt-sm="90 " flex-gt-md="100 ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card
+					ng-controller="dashboardCtrl "> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Scheduled</h2>
 				</md-data-table-toolbar>  <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="id" name="ID"></th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="type" name="Domain"></th>
-							<th numeric order-by="calories" name="Experience"></th>
+							<th order-by="id " name="ID "></th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="type " name="Domain "></th>
+							<th numeric order-by="calories " name="Experience "></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-						 
-							ng-repeat="ds in vm.selected |   limitTo: query.limit: (query.page - 1) * query.limit">
+
+							ng-repeat="ds in vm.selected | limitTo: query.limit: (query.page - 1) * query.limit ">
 							<td>{{ds._id}}</td>
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.email}}</td>
@@ -196,41 +194,41 @@
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{vm.selected.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{vm.selected.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	 </div>
-	 
-	 <div role="tabpanel" id="tab5-content" aria-labelledby="tab5"
-		ng-switch-when="4" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card
-					ng-controller="dashboardCtrl"> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Scheduled</h2>
+
+	 <div role="tabpanel " id="tab5-content " aria-labelledby="tab5 "
+		ng-switch-when="4 " md-swipe-left="next() " md-swipe-right="previous() "
+		layout="row " layout-align="center center ">
+		<div flex-gt-sm="90 " flex-gt-md="100 ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card
+					ng-controller="dashboardCtrl "> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Scheduled</h2>
 				</md-data-table-toolbar>  <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="id" name="ID"></th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="type" name="Domain"></th>
-							<th numeric order-by="calories" name="Experience"></th>
+							<th order-by="id " name="ID "></th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="type " name="Domain "></th>
+							<th numeric order-by="calories " name="Experience "></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-						 
-							ng-repeat="ds in vm.onhold |   limitTo: query.limit: (query.page - 1) * query.limit">
+
+							ng-repeat="ds in vm.onhold | limitTo: query.limit: (query.page - 1) * query.limit ">
 							<td>{{ds._id}}</td>
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.email}}</td>
@@ -241,40 +239,40 @@
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{vm.onhold.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{vm.onhold.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	 </div>
-	  <div role="tabpanel" id="tab6-content" aria-labelledby="tab6"
-		ng-switch-when="5" md-swipe-left="next()" md-swipe-right="previous()"
-		layout="row" layout-align="center center">
-		<div flex-gt-sm="90" flex-gt-md="100">
-			<div layout="column">
-				<md-content laout="column" flex> <md-card
-					ng-controller="dashboardCtrl"> <md-data-table-toolbar
-					ng-show="!selected.length">
-				<h2 class="md-title">Rejected</h2>
+	  <div role="tabpanel " id="tab6-content " aria-labelledby="tab6 "
+		ng-switch-when="5 " md-swipe-left="next() " md-swipe-right="previous() "
+		layout="row " layout-align="center center ">
+		<div flex-gt-sm="90 " flex-gt-md="100 ">
+			<div layout="column ">
+				<md-content laout="column " flex> <md-card
+					ng-controller="dashboardCtrl "> <md-data-table-toolbar
+					ng-show="!selected.length ">
+				<h2 class="md-title ">Rejected</h2>
 				</md-data-table-toolbar>  <md-data-table-container>
-				<table md-data-table class="md-primary" 
-					md-progress="deferred">
-					<thead md-order="query.order" md-trigger="onorderchange">
+				<table md-data-table class="md-primary "
+					md-progress="deferred ">
+					<thead md-order="query.order " md-trigger="onorderchange ">
 						<tr>
-							<th order-by="id" name="ID"></th>
-							<th order-by="name" name="Name"</th>
-							<th order-by="email" name="Email"</th>
-							<th order-by="contact number" name="Contact Number"</th>
-							<th order-by="domain" name="Domain"</th>
-							<th order-by="experience" name="Experience"></th>
-							<th order-by="comments" name="Comments"</th>
+							<th order-by="id " name="ID "></th>
+							<th order-by="name " name="Name "</th>
+							<th order-by="email " name="Email "</th>
+							<th order-by="contact number " name="Contact Number "</th>
+							<th order-by="domain " name="Domain "</th>
+							<th order-by="experience " name="Experience "></th>
+							<th order-by="comments " name="Comments "</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr md-auto-select
-						 
-							ng-repeat="ds in vm.rejected |   limitTo: query.limit: (query.page - 1) * query.limit">
+
+							ng-repeat="ds in vm.rejected | limitTo: query.limit: (query.page - 1) * query.limit ">
 							<td>{{ds._id}}</td>
 							<td>{{ds.firstname}} {{ds.lastname}}</td>
 							<td>{{ds.email}}</td>
@@ -286,19 +284,18 @@
 						</tr>
 					</tbody>
 				</table>
-				</md-data-table-container> <md-data-table-pagination md-limit="50"
-					md-page="1" md-total="{{vm.rejected.length}}"
-					md-trigger="onpagechange"></md-data-table-pagination></md-content>
+				</md-data-table-container> <md-data-table-pagination md-limit="50 "
+					md-page="1 " md-total="{{vm.rejected.length}} "
+					md-trigger="onpagechange "></md-data-table-pagination></md-content>
 			</div>
 			</md-card>
 		</div>
 	 </div>
 	</ng-switch> </ui-view> </md-content>
 </div>
-  
+
 <style>
 md-dialog{
 width: 560px;
 }
 </style>
-

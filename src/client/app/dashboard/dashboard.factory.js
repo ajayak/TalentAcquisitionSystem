@@ -75,7 +75,7 @@
 			return Restangular.all(URL.LIST).post().then(listSuccess, listFailed);
 		}
 
-		
+
 		function listInterviewer() {
 			console.log("inside factory");
 			return Restangular.all(URL.LIST_INTERVIEWER).post();
