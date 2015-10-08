@@ -8,11 +8,14 @@
     <title zz-update-title>TAS</title>
     <!-- inject-vendor:css -->
     <link rel="stylesheet" href="bower_components\angular-material\angular-material.css">
+    <link rel="stylesheet" href="bower_components\angularjs-datepicker\src\css\angular-datepicker.css">
     <link rel="stylesheet" href="bower_components\angular-loading-bar\build\loading-bar.css">
     <link rel="stylesheet" href="bower_components\toastr\toastr.css">
     <link rel="stylesheet" href="/src/client/content/css/angular-material.min.css">
+    <link rel="stylesheet" href="/src/client/content/css/list.css">
 	<link rel="stylesheet" href="/src/client/content/css/new.css">
     <link rel="stylesheet" href="/src/client/content/css/googlecss.css">
+    <link rel="stylesheet" href="/src/client/content/css/md-data-table.css">
     <!-- endinject -->
 
     <!-- inject:css -->
@@ -32,27 +35,29 @@
 
 <body>
 
-    <!--Navbar and Sidebar-->
-    <div ng-include="'app/layout/shell.html'"></div>
-
     <!--Fill View based on App Route/State-->
     <div ui-view></div>
 
     <!-- inject-vendor:js -->
-    <script src="bower_components\jquery\dist\jquery.js"></script>
+    <script src="../content/js/jquery-1.11.3.min.js"></script>
     <script src="bower_components\lodash\lodash.js"></script>
     <script src="bower_components\toastr\toastr.js"></script>
     <script src="bower_components\angular\angular.js"></script>
     <script src="bower_components\angular-animate\angular-animate.js"></script>
     <script src="bower_components\angular-aria\angular-aria.js"></script>
     <script src="bower_components\angular-material\angular-material.js"></script>
+    <script src="bower_components\angularjs-datepicker\src\js\angular-datepicker.js"></script>
     <script src="bower_components\angular-ui-router\release\angular-ui-router.js"></script>
     <script src="bower_components\restangular\dist\restangular.js"></script>
     <script src="bower_components\angular-loading-bar\build\loading-bar.js"></script>
     <script src="bower_components\angular-messages\angular-messages.js"></script>
+    <script src="../content/js/md-data-table.js"></script>
+    <script src="../content/js/list.js"></script>
+    <script src="../content/js/binding.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
+    
     <!-- Bootstrapping -->
 
     <!--App Module-->
@@ -81,6 +86,17 @@
     <script src="app/demo/demo.factory.js"></script>
     <script src="app/demo/demoCtrl.js"></script>
 
+    <!--Login Module-->
+    <script src="app/login/login.module.js"></script>
+    <script src="app/login/login.route.js"></script>
+    <script src="app/login/login.factory.js"></script>
+    <script src="app/login/loginCtrl.js"></script>
+    <!--dashboard Module-->
+	<script src="app/dashboard/dashboard.module.js"></script>
+	<script src="app/dashboard/dashboard.route.js"></script>
+	<script src="app/dashboard/dashboard.factory.js"></script>
+	<script src="app/dashboard/dashboardCtrl.js"></script>
+    
     <!-- endinject -->
 </body>
 
