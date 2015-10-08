@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"editor.tabSize": 4,
+	"editor.wrappingColumn": 0,
+	"files.trimTrailingWhitespace": true,
+	"editor.formatOnType": true,
+	"editor.lineHeight": 0
+}
