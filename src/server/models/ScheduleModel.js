@@ -2,12 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var scheduleSchema = new Schema({
-	id : String,
-	manager : String,
-	date : String,
-	time : String,
+	id: String,
+	manager: String,
+	date: String,
+	time: String,
 
-	 
+
 	// status: Unscheduled,Scheduled,Onhold,Delete
 });
 

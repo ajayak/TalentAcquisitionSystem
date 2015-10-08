@@ -1,4 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
 'use strict';
 
 var express = require('express');
@@ -46,13 +45,6 @@ routes = require('./routes/index')(app);
 console.log('About to crank up node');
 console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
-
-app.get('/aaa', function(req, res){
-   console.log('Hello');
-   res.status(200).json({
-       abc: 'def'
-   });
-});
 
 switch (environment){
     case 'stage':

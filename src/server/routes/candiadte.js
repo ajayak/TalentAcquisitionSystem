@@ -1,4 +1,3 @@
-/// <reference path="../../../typings/express/express.d.ts" />
 module.exports = function (app) {
 
 	var Candidate = require('../models/CandidateModel');
@@ -33,7 +32,7 @@ module.exports = function (app) {
 			}
 
 		});
-	 
+
 		//
 	});
 	function getNextSequence(name) {
@@ -43,15 +42,15 @@ module.exports = function (app) {
 	db.collection('counters').find({_id: "userid"}).toArray(function (err, result) {
       if (err) {
         console.log(err);
-		
+
       } else if (result.length) {
         console.log('Found:', result[0].seq);
 		assign(result[0].seq);
-		
+
       } else {
 		 // db.close();
         console.log('No document(s) found with defined "find" criteria!');
-		
+
       }
 		});
 function assign(data){
@@ -80,23 +79,23 @@ function assign(data){
 			  db.collection('candidates').update({ "email": c.email}, { $set: { "status" : "Scheduled" } }
 				 , function(err, results) {
                   console.log(err);
-                  console.log(results); 
+                  console.log(results);
                 });
 				 console.log("User saved successfully!");
 				 res.send('Interview schedule successfully!');
 			}
 
 		});
-	 
+
 		//
 	});
-	
+
 	app.post('/rejected', function (req, res) {
 		var c = req.body.user;
 		var rejected = new Rejected({
 			id : c.uid,
 			comments : c.comments
-			
+
 
 		});
 
@@ -109,14 +108,14 @@ function assign(data){
 			  db.collection('candidates').update({ "email": c.email}, { $set: { "status" : "Rejected" } }
 				 , function(err, results) {
                   console.log(err);
-                  console.log(results); 
+                  console.log(results);
                 });
 				 console.log("User Rejected nnn successfully!");
 				 res.send('User Rejected successfully!');
 			}
 
 		});
-	 
+
 		//
 	});
 
@@ -140,4 +139,3 @@ function assign(data){
 	});
 
 }
- 
